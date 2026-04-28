@@ -53,12 +53,12 @@ export const Skills = () => (
                             <h2>C/C++</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={python} width="100%"></img>
-                            <h2>Python</h2>
+                            <img src={javascript} width="100%"></img>
+                            <h2>JavaScript</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={css} width="100%"></img>
-                            <h2>CSS</h2>
+                            <img src={lua} width="100%"></img>
+                            <h2>Lua</h2>
                         </div>
                     </div>
                     <div className="skinnycol">
@@ -67,12 +67,8 @@ export const Skills = () => (
                             <h2>C#</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={javascript} width="100%"></img>
-                            <h2>JavaScript</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img src={php} width="100%"></img>
-                            <h2>PHP</h2>
+                            <img src={html} width="100%"></img>
+                            <h2>HTML</h2>
                         </div>
                     </div>
                     <div className="skinnycol">
@@ -81,17 +77,24 @@ export const Skills = () => (
                             <h2>Java</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={html} width="100%"></img>
-                            <h2>HTML</h2>
+                            <img src={css} width="100%"></img>
+                            <h2>CSS</h2>
+                        </div>
+                    </div>
+                    <div className="skinnycol">
+                        <div className="insetcard">
+                            <img src={python} width="100%"></img>
+                            <h2>Python</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={lua} width="100%"></img>
-                            <h2>Lua</h2>
+                            <img src={php} width="100%"></img>
+                            <h2>PHP</h2>
                         </div>
                     </div>
                 </div>
             </AccordionDetails>
         </Accordion>
+
         <Accordion slotProps={{ heading: { component: 'h2' } }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -108,8 +111,8 @@ export const Skills = () => (
                             <h2>OpenGL</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={bootstrap} width="100%"></img>
-                            <h2>Bootstrap</h2>
+                            <img src={dotnet} width="100%"></img>
+                            <h2>.NET/ASP.NET</h2>
                         </div>
                     </div>
                     <div className="skinnycol">
@@ -127,14 +130,17 @@ export const Skills = () => (
                             <img src={react} width="100%"></img>
                             <h2>React</h2>
                         </div>
+                    </div>
+                    <div className="skinnycol">
                         <div className="insetcard">
-                            <img src={dotnet} width="100%"></img>
-                            <h2>.NET/ASP.NET</h2>
+                            <img src={bootstrap} width="100%"></img>
+                            <h2>Bootstrap</h2>
                         </div>
                     </div>
                 </div>
             </AccordionDetails>
         </Accordion>
+
         <Accordion slotProps={{ heading: { component: 'h2' } }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -151,12 +157,8 @@ export const Skills = () => (
                             <h2>Visual Studio 2022/2026</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={github} width="100%"></img>
-                            <h2>GitHub</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img src={mysql} width="100%"></img>
-                            <h2>MySQL/ MariaDB</h2>
+                            <img src={docker} width="100%"></img>
+                            <h2>Docker</h2>
                         </div>
                     </div>
                     <div className="skinnycol">
@@ -168,10 +170,6 @@ export const Skills = () => (
                             <img src={unity} width="100%"></img>
                             <h2>Unity</h2>
                         </div>
-                        <div className="insetcard">
-                            <img src={cmake} width="100%"></img>
-                            <h2>CMake</h2>
-                        </div>
                     </div>
                     <div className="skinnycol">
                         <div className="insetcard">
@@ -179,13 +177,24 @@ export const Skills = () => (
                             <h2>Git</h2>
                         </div>
                         <div className="insetcard">
-                            <img src={docker} width="100%"></img>
-                            <h2>Docker</h2>
+                            <img src={mysql} width="100%"></img>
+                            <h2>MySQL/ MariaDB</h2>
+                        </div>
+                    </div>
+                    <div className="skinnycol">
+                        <div className="insetcard">
+                            <img src={github} width="100%"></img>
+                            <h2>GitHub</h2>
+                        </div>
+                        <div className="insetcard">
+                            <img src={cmake} width="100%"></img>
+                            <h2>CMake</h2>
                         </div>
                     </div>
                 </div>
             </AccordionDetails>
         </Accordion>
+
         <Accordion slotProps={{ heading: { component: 'h2' } }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -201,10 +210,6 @@ export const Skills = () => (
                             <img src={windows} width="100%"></img>
                             <h2>Windows</h2>
                         </div>
-                        <div className="insetcard">
-                            <img src={apple} width="100%"></img>
-                            <h2>MacOS</h2>
-                        </div>
                     </div>
                     <div className="skinnycol">
                         <div className="insetcard">
@@ -216,6 +221,12 @@ export const Skills = () => (
                         <div className="insetcard">
                             <img src={linux} width="100%"></img>
                             <h2>Unix/Linux</h2>
+                        </div>
+                    </div>
+                    <div className="skinnycol">
+                        <div className="insetcard">
+                            <img src={apple} width="100%"></img>
+                            <h2>MacOS</h2>
                         </div>
                     </div>
                 </div>
