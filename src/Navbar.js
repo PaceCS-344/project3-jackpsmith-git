@@ -4,12 +4,12 @@ export const Navbar = () => (
   <div style={{position: 'sticky', top: 0, zIndex: 100}}>
     <nav className="navbar">
 
-      <div className="flex-grid">
+      <div className="flex-grid" style={{marginTop: 5, marginBottom: 5}}>
         <div class="col">
             <div className="nav-links">
-              <Link to="/"><h3>Jack P Smith</h3></Link>
+              <Link to="/"><h2 style={{marginBottom: 0, marginTop: 0}}>Jack P Smith</h2></Link>
             </div>
-            <h1 className="logo">Software Developer</h1>
+            <h3>Software Developer</h3>
         </div>
       </div>
       <div className="nav-links">

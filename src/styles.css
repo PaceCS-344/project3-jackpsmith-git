@@ -142,7 +142,6 @@ homepagebody {
 
 .skinnycol {
   flex: 1;
-  min-width: 100px;
   width: auto;
   padding: 5px;
 }
@@ -161,7 +160,7 @@ homepagebody {
   margin-top: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #323232;
-  background-color: rgb(197, 197, 197);
+  background-color: rgb(233, 233, 233);
   min-height: 200px;
   max-width: 1000px;
   cursor: pointer;

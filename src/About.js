@@ -9,7 +9,10 @@ export const About = () => (
       <img src={headshot} alt="Headshot" width={200}></img>
     </div>
     <p>
-        Hi, I'm Jack. I am currently a student at Pace University pursuing a Bachelor of Science in Computer Science. Click on the 'Projects' tab in the upper right to browse my current and past projects.
+        Hi, I'm Jack. I am currently a student at Pace University pursuing a Bachelor of Science in Computer Science. 
+    </p>
+    <p>
+      Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' page to learn more about me.
     </p>
   </div>
   </div>

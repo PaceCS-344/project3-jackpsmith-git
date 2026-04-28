@@ -14,21 +14,21 @@ export const Home = () => (
             <div className="col">
               <div className="shakecard">
                 <img src={cataclysm} alt="Screenshot of Cataclysm Engine." width="100%"></img>
-                <h3>Cataclysm (C/C++, C#, OpenGL, GLSL)</h3>
+                <h3 style={{paddingTop: 12}}>Cataclysm (C/C++, C#, OpenGL, GLSL)</h3>
                 <p>2D rendering & game development engine powered by OpenGL</p>
               </div>
             </div>
             <div className="col">
               <div className="shakecard">
                 <img src={shaderSandbox} alt="Screenshot of Shader Sandbox." width="100%"></img>
-                <h3>Shader Sandbox (C/C++, OpenGL, GLSL)</h3>
+                <h3 style={{paddingTop: 12}}>Shader Sandbox (C/C++, OpenGL, GLSL)</h3>
                 <p>Portable Windows tool for testing GLSL shaders in an offline environment</p>
               </div>
             </div>
             <div className="col">
               <div className="shakecard">
                 <img src={pcr} alt="Screenshot of Point-Cloud Renderer." width="100%"></img>
-                <h3>Point-Cloud Renderer (C/C++, Vulkan, GLSL)</h3>
+                <h3 style={{paddingTop: 12}}>Point-Cloud Renderer (C/C++, Vulkan, GLSL)</h3>
                 <p>3D, point-cloud, Vulkan renderer for Windows</p>
               </div>
             </div>

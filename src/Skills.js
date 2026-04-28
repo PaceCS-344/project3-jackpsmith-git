@@ -43,7 +43,7 @@ export const Skills = () => (
                 id="panel1-header"
                 
             >
-                Programming Languages
+                <h3>Programming Languages</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <div className="flex-grid">
@@ -98,7 +98,7 @@ export const Skills = () => (
                 aria-controls="panel2-content"
                 id="panel2-header"
             >
-                Frameworks/Libraries
+                <h3>Frameworks/Libraries</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <div className="flex-grid">
@@ -141,7 +141,7 @@ export const Skills = () => (
                 aria-controls="panel3-content"
                 id="panel3-header"
             >
-                Development Tools
+                <h3>Development Tools</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <div className="flex-grid">
@@ -192,7 +192,7 @@ export const Skills = () => (
                 aria-controls="panel4-content"
                 id="panel4-header"
             >
-                Operating Systems
+                <h3>Operating Systems</h3>
             </AccordionSummary>
             <AccordionDetails>
                 <div className="flex-grid">
