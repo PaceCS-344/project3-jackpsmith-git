@@ -95,6 +95,7 @@ export const Projects = () => {
                   alt={repo.name}
                   style={{
                     width: 100,
+                    height: 50,
                     objectFit: "cover",
                     borderRadius: 8,
                     marginRight: 12
