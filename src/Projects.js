@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GitHubButton from 'react-github-btn';
 import { Button } from './Button.js';
-
-// import cataclysm from "./images/cataclysm.png";
-// import shaderSandbox from "./images/shaderSandbox.png";
-// import pcr from "./images/pointcloudrenderer.png";
-// import forge from "./images/forge.png";
 import github from "./images/github.png"
 
 import Accordion from '@mui/material/Accordion';
@@ -68,13 +63,6 @@ export const Projects = () => {
   <div style={{ maxWidth: '1000px' }}>
   <div className="p-6">
     <h2 className="text-3xl font-bold mb-4">Projects</h2>
-    {/* <pre>{JSON.stringify(repos, null, 2)}</pre>
-    <div>
-      {repos.forEach(repo => {
-        <p>repo[0];</p>
-      });}
-    </div> */}
-
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {repos.map((repo) => (
@@ -100,7 +88,7 @@ export const Projects = () => {
                   <GitHubButton href={`${repo.url}`} data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" data-size="large" aria-label="Source Code">Source Code</GitHubButton>
                 </span>
                 <span>
-                  <div style={{ margin: 0, display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                  <div className="insetcard" style={{ margin: 0, display: 'flex', flexDirection: 'row', alignItems: 'center', padding: 4, paddingLeft: 8, paddingRight: 8, borderRadius: 4, boxShadow: 'inset 0 2px 3px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgb(247, 247, 247)'}}>
                     <span style={{paddingRight: 10, alignItems: 'center'}}>
                       <strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}
                     </span>
@@ -114,94 +102,6 @@ export const Projects = () => {
         ))}
       </div>
     </div>
-
-
-    {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                
-            >
-              <div className="flex-grid">
-                <img src={cataclysm} alt="Screenshot of Cataclysm Engine." width={150}></img>
-                <h3 style={{paddingTop: 20, paddingBottom: 5}} className="font-semibold">Cataclysm Engine (C/C++, C#, OpenGL, GLSL)</h3>
-              </div>
-            </AccordionSummary>
-            <AccordionDetails>
-              <p style={{marginTop: 0}}>Cataclysm is a Windows-only, 2D rendering and game development engine written in C++, based on Hazel Engine by Studio Cherno. Included with the Cataclysm Engine is Caterpillar, the visual editor for Cataclysm, as well as the Cataclysm Core Mono Library (CCML). The default renderer included with Cataclysm is Vesuvius, a custom-built 2D renderer that currently supports OpenGL. Cataclysm supports C# scripting with Mono, an open source implementation of .NET, as well as native scripting with C++.</p>
-              <p>Features:</p>
-              <ul className="list-disc pl-6">
-                  <li>C# Scripting with Mono</li>
-                  <li>Visual Editor (Caterpillar)</li>
-                  <li>2D Rendering with OpenGL</li>
-                  <li>Audio Rendering with miniaudio</li>
-                  <li>2D Physics and Collision Detection with Box2D</li>
-                  <li>Visual Profiler</li>
-                  <li>Frame Debugging</li>
-              </ul>
-              <Button className="mt-2" href="https://github.com/jackpsmith-git/Cataclysm">Source Code</Button>
-            </AccordionDetails>
-        </Accordion>
-        
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                
-            >
-              <div className="flex-grid">
-                <img src={shaderSandbox} alt="Screenshot of Shader Sandbox." width={150}></img>
-                <h3 style={{paddingTop: 20, paddingBottom: 5}} className="font-semibold">Shader Sandbox (C/C++, OpenGL, GLSL)</h3>
-              </div>
-            </AccordionSummary>
-            <AccordionDetails>
-              <p style={{marginTop: 0}}>Shader Sandbox is a portable Windows tool for testing GLSL shaders in an offline environment. Shader Sandbox supports OpenGL/GLSL 4.6.</p>
-              <Button className="mt-2" href="https://github.com/jackpsmith-git/ShaderSandbox">Source Code</Button>
-            </AccordionDetails>
-        </Accordion>
-
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                
-            >
-              <div className="flex-grid">
-                <img src={pcr} alt="Screenshot of point cloud renderer." width={150}></img>
-                <h3 style={{paddingTop: 20, paddingBottom: 5}} className="font-semibold">Point-Cloud Renderer(C/C++, Vulkan, GLSL)</h3>
-              </div>
-            </AccordionSummary>
-            <AccordionDetails>
-              <p style={{marginTop: 0}}>3D, point-cloud, Vulkan renderer for Windows. Utilizes compute shaders to calculate, distribute, and render up to tens of millions of particles on the GPU. The binaries below contain a sample application that renders a small mesh with 10,000 particles.</p>
-              <Button className="mt-2" href="https://github.com/jackpsmith-git/PointCloudRenderer">Source Code</Button>
-            </AccordionDetails>
-        </Accordion>
-
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                
-            >
-              <div className="flex-grid">
-                <img src={forge} alt="Forge logo." width={150}></img>
-                <h3 style={{paddingTop: 20, paddingBottom: 5}} className="font-semibold">Forge Password Management Utility (C#, WinForms)</h3>
-              </div>
-            </AccordionSummary>
-            <AccordionDetails>
-              <p style={{marginTop: 0}}>Forge is a portable password management utility for Windows 10/11.</p>
-              <p>Forge stores your data in encrypted files called vaults. Vaults live in a subdirectory alongside the executable so that you always have control over your own data. Forge collects no user data. When you give Forge your sensitive data, it is never written to disk in an unencrypted state. Forge serializes and encrypts the vault data in memory before writing to disk, and can only decrypt the data if the correct AES key is provided.</p>
-              <Button className="mt-2" href="https://github.com/jackpsmith-git/Forge">Source Code</Button>
-            </AccordionDetails>
-        </Accordion>
-      </div>
-    </div> */}
   </div>
   </div>
   </div>
