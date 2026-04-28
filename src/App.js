@@ -5,6 +5,7 @@ import { About } from './About.js';
 import { Projects } from './Projects.js'
 import { Contact } from "./Contact.js";
 import { Skills } from "./Skills.js";
+import { Footer } from "./Footer.js";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     );
 }
