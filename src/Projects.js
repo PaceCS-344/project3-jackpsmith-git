@@ -3,10 +3,24 @@ import GitHubButton from 'react-github-btn';
 import { Button } from './Button.js';
 import github from "./images/github.png"
 
+import cataclysm from "./images/Cataclysm.png"
+import shadersandbox from "./images/ShaderSandbox.png"
+import pcr from "./images/PointCloudRenderer.png"
+import forge from "./images/forge.png"
+import uno from "./images/TermProject.png"
+
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+const REPO_IMAGES = {
+  "ShaderSandbox" : shadersandbox,
+  "Cataclysm" : cataclysm,
+  "PointCloudRenderer" : pcr,
+  "Forge" : forge,
+  "TermProject" : uno,
+}
 
 export const Projects = () => {
   const [repos, setRepos] = useState([]);
@@ -19,8 +33,14 @@ export const Projects = () => {
         );
         const data = await res.json();
 
+        if (!Array.isArray(data)) {
+          console.error("GitHub API error:", data);
+          return;
+        }
+
         const enriched = await Promise.all(
           data.map(async (repo) => {
+            const image = REPO_IMAGES[repo.name];
             const [languagesRes] =
               await Promise.all([
                 fetch(repo.languages_url),
@@ -42,6 +62,7 @@ export const Projects = () => {
               watchers: repo.watchers_count,
               issues: repo.open_issues_count,
               languages: Object.keys(languages),
+              image: image,
               // collaborators: contributors.map((c) => c.login),
               // releases: releases.map((r) => r.name),
               // tags: tags.map((t) => t.name),
@@ -68,6 +89,21 @@ export const Projects = () => {
         {repos.map((repo) => (
           <Accordion key={repo.name}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              {repo.image ? (
+                 <img
+                  src={repo.image}
+                  alt={repo.name}
+                  style={{
+                    width: 100,
+                    objectFit: "cover",
+                    borderRadius: 8,
+                    marginRight: 12
+                  }}
+                />
+              ) : (
+                <div style={{width: 100, height: 50}} />
+              )}
+              
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span>
                   <h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">

@@ -1,6 +1,6 @@
-import cataclysm from "./images/cataclysm.png"
-import shaderSandbox from "./images/shaderSandbox.png"
-import pcr from "./images/pointcloudrenderer.png"
+import cataclysm from "./images/Cataclysm.png"
+import shaderSandbox from "./images/ShaderSandbox.png"
+import pcr from "./images/PointCloudRenderer.png"
 import { Button } from './Button.js';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
