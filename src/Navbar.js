@@ -9,7 +9,7 @@ export const Navbar = () => (
             <div className="nav-links">
               <Link to="/"><h2 style={{marginBottom: 0, marginTop: 0}}>Jack P Smith</h2></Link>
             </div>
-            <h3>Software Developer</h3>
+            <h3 style={{marginLeft: 0, marginRight: 0, textAlign: 'left'}}>Software Developer</h3>
         </div>
       </div>
       <div className="nav-links">

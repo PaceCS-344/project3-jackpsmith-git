@@ -1,7 +1,7 @@
-import mail from "./images/mail.png"
 import github from "./images/github.png"
 import linkedin from "./images/linkedin.png"
 import nuget from "./images/nuget.png"
+import headshot from "./images/headshot.jpeg"
 
 export const Contact = () => (
   <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -9,11 +9,24 @@ export const Contact = () => (
   <div className="p-6">
     <h2 className="text-3xl font-bold mb-4">Contact</h2>
     <div className="floatingtile">
-      <p><img src={mail} style={{ verticalAlign: 'middle' }} width="5%"></img> <a href="mailto:jackpsmith@jackpsmith.com">jackpsmith@jackpsmith.com</a></p>
-      <p><img src={mail} style={{ verticalAlign: 'middle' }} width="5%"></img> <a href="mailto:js99564p@pace.edu">js99564p@pace.edu</a></p>
-      <p><img src={linkedin} style={{ verticalAlign: 'middle' }} width="5%"></img> <a href="https://linkedin.com/in/jackpetersmith">linkedin.com/in/jackpetersmith</a></p>
-      <p><img src={github} style={{ verticalAlign: 'middle' }} width="5%"></img> <a href="https://github.com/jackpsmith-git">github.com/jackpsmith-git</a></p>
-      <p><img src={nuget} style={{ verticalAlign: 'middle' }} width="5%"></img> <a href="https://www.nuget.org/profiles/jackpsmith">nuget.org/profiles/jackpsmith</a></p>
+      <img style={{borderRadius: '90%', aspectRatio: 1/1, objectFit: 'cover', objectPosition: 'top', width: 100}} src={headshot}></img>
+      <h3 style={{padding: 15}}>Jack P. Smith</h3>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jackpsmith@jackpsmith.com">jackpsmith@jackpsmith.com</a></p>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:js99564p@pace.edu">js99564p@pace.edu</a></p>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jpsmith8603@gmail.com">jpsmith8603@gmail.com</a></p>
+
+      <div class="row" style={{paddingTop: 15}}>
+        <a style={{marginRight: 10}} href="https://github.com/jackpsmith-git">
+            <img src={github} height={40}></img>
+        </a>
+        <a style={{marginRight: 10}} href="https://www.linkedin.com/in/jackpetersmith">
+            <img src={linkedin} height={40}></img>
+        </a>
+        <a style={{marginRight: 10}} href="https://www.nuget.org/profiles/jackpsmith">
+            <img src={nuget} height={40}></img>
+        </a>
+      </div>
+
     </div>
   </div>
   </div>
