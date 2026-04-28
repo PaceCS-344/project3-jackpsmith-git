@@ -8,7 +8,7 @@ export const Home = () => (
   <div className="p-6 graybackground">
     <homepagebody>
       <div>
-        <div style={{padding: 40}}>
+        <div style={{padding: 40, paddingTop: 20}}>
           <h2>Featured Projects</h2>
           <div className="flex-grid">
             <div className="col">

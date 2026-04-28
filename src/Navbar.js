@@ -7,7 +7,7 @@ export const Navbar = () => (
       <div className="flex-grid" style={{marginTop: 5, marginBottom: 5}}>
         <div class="col">
             <div className="nav-links">
-              <Link to="/"><h2 style={{marginBottom: 0, marginTop: 0}}>Jack P Smith</h2></Link>
+              <Link to="/"><h2 style={{marginBottom: 0, marginTop: 0, marginLeft: 0, textAlign: 'left'}}>Jack P Smith</h2></Link>
             </div>
             <h3 style={{marginLeft: 0, marginRight: 0, textAlign: 'left'}}>Software Developer</h3>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import GitHubButton from 'react-github-btn';
 import { Button } from './Button.js';
+
 // import cataclysm from "./images/cataclysm.png";
 // import shaderSandbox from "./images/shaderSandbox.png";
 // import pcr from "./images/pointcloudrenderer.png";
@@ -96,16 +97,13 @@ export const Projects = () => {
               <p>{repo.description}</p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span>
-                  <a href={repo.url}>
-                    <img style={{opacity: .8}} src={github} height={35}></img>
-                  </a>
-                  {/* <Button className="mt-2" href={repo.url}>
-                    Source Code
-                  </Button> */}
+                  <GitHubButton href={`${repo.url}`} data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" data-size="large" aria-label="Source Code">Source Code</GitHubButton>
                 </span>
                 <span>
                   <div style={{ margin: 0, display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                    <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}</span>
+                    <span style={{paddingRight: 10, alignItems: 'center'}}>
+                      <strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}
+                    </span>
                     <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>👁</strong> {repo.watchers}</span>
                     <span style={{alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>⚠</strong> {repo.issues}</span>
                   </div>
