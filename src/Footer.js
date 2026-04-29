@@ -6,7 +6,7 @@ import linkedin from "./images/linkedin.png"
 export const Footer = () => (
   <div className="footer">
   <nav className="footercontent">
-      <div className="flex-grid" style={{marginTop: 5, marginBottom: 5}}>        
+      <div className="flex-grid" style={{marginTop: 20, marginBottom: 60}}>        
         <div class="col">
             <div className="nav-links">
               <Link to="/"><h2 style={{marginBottom: 0}}>Jack P Smith</h2></Link>
@@ -33,7 +33,8 @@ export const Footer = () => (
         marginLeft: 'auto',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-end' // ⭐ key
+        justifyContent: 'top',
+        alignItems: 'flex-end'
     }}
     >
         <div className="nav-links" style={{marginBottom: 10}}><Link to="/">Home</Link></div>
