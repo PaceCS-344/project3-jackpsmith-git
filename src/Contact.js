@@ -11,22 +11,27 @@ export const Contact = () => (
     <div className="floatingtile">
       <img style={{borderRadius: '90%', aspectRatio: 1/1, objectFit: 'cover', objectPosition: 'top', width: 100}} src={headshot}></img>
       <h3 style={{padding: 15}}>Jack P. Smith</h3>
-      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jackpsmith@jackpsmith.com">jackpsmith@jackpsmith.com</a></p>
-      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:js99564p@pace.edu">js99564p@pace.edu</a></p>
-      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jpsmith8603@gmail.com">jpsmith8603@gmail.com</a></p>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jackpsmith@jackpsmith.com" target="_blank">jackpsmith@jackpsmith.com</a></p>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:js99564p@pace.edu" target="_blank">js99564p@pace.edu</a></p>
+      <p style={{paddingBottom: 5, margin: 0}}><a href="mailto:jpsmith8603@gmail.com" target="_blank">jpsmith8603@gmail.com</a></p>
 
-      <div class="row" style={{paddingTop: 15}}>
-        <a style={{marginRight: 10}} href="https://github.com/jackpsmith-git">
-            <img src={github} height={40}></img>
-        </a>
-        <a style={{marginRight: 10}} href="https://www.linkedin.com/in/jackpetersmith">
-            <img src={linkedin} height={40}></img>
-        </a>
-        <a style={{marginRight: 10}} href="https://www.nuget.org/profiles/jackpsmith">
-            <img src={nuget} height={40}></img>
-        </a>
+        <div className="row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: 15 }}>
+          <div className="shake">
+              <a style={{ marginRight: 10 }} href="https://github.com/jackpsmith-git" target="_blank">
+                  <img src={github} height={40} />
+              </a>
+          </div>
+          <div className="shake">
+              <a style={{ marginRight: 10 }} href="https://www.linkedin.com/in/jackpetersmith" target="_blank">
+                  <img src={linkedin} height={40} />
+              </a>
+          </div>
+          <div className="shake">
+              <a href="https://www.nuget.org/profiles/jackpsmith" target="_blank">
+                  <img src={nuget} height={40} />
+              </a>
+          </div>
       </div>
-
     </div>
   </div>
   </div>

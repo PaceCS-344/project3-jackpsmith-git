@@ -92,7 +92,7 @@ export const Skills = () => {
                 {Object.entries(PROGRAMMING_LANGUAGES).map(([key, value]) => (
                     <div>
                         <div className="insetcard">
-                            <img src={value} width="100%" />
+                            <div className="shakenopoint"><img src={value} width="100%" /></div>
                             <h2>{key}</h2>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export const Skills = () => {
                 {Object.entries(FRAMEWORKS).map(([key, value]) => (
                     <div>
                         <div className="insetcard">
-                            <img src={value} width="100%" />
+                            <div className="shakenopoint"><img src={value} width="100%" /></div>
                             <h2>{key}</h2>
                         </div>
                     </div>
@@ -136,7 +136,7 @@ export const Skills = () => {
                 {Object.entries(DEVTOOLS).map(([key, value]) => (
                     <div>
                         <div className="insetcard">
-                            <img src={value} width="100%" />
+                            <div className="shakenopoint"><img src={value} width="100%" /></div>
                             <h2>{key}</h2>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ export const Skills = () => {
                 {Object.entries(OPERATING_SYSTEMS).map(([key, value]) => (
                     <div>
                         <div className="insetcard">
-                            <img src={value} width="100%" />
+                            <div className="shakenopoint"><img src={value} width="100%" /></div>
                             <h2>{key}</h2>
                         </div>
                     </div>

@@ -8,16 +8,28 @@ export const Footer = () => (
   <div className="footer">
   <nav className="footercontent">
     <div className="flex-grid" style={{marginTop: 20, marginBottom: 60}}>        
-        <div class="col">
+        <div className="col">
             <div className="nav-links"><Link to="/"><h2 style={{marginBottom: 0}}>Jack P Smith</h2></Link></div>            
             <h3 style={{textAlign: 'left'}}>Software Developer</h3>
             <p style={{marginBottom: 0}} className="nav-links"><Link to="mailto:jackpsmith@jackpsmith.com">jackpsmith@jackpsmith.com</Link></p>
             <p style={{marginBottom: 0, marginTop: 0}} className="nav-links"><Link to="mailto:js99564p@pace.edu">js99564p@pace.edu</Link></p>
             <p style={{marginBottom: 20, marginTop: 0}} className="nav-links"><Link to="mailto:jpsmith8603@gmail.com">jpsmith8603@gmail.com</Link></p>
-            <div class="row">
-                <a style={{marginRight: 10}} href="https://github.com/jackpsmith-git"><img src={github} height={40}></img></a>
-                <a style={{marginRight: 10}} href="https://www.linkedin.com/in/jackpetersmith"><img src={linkedin} height={40}></img></a>
-                <a style={{marginRight: 10}} href="https://www.nuget.org/profiles/jackpsmith"><img src={nuget} height={40}></img></a>
+            <div className="row" style={{ display: 'flex', alignItems: 'center' }}>
+                <div className="shake">
+                    <a style={{ marginRight: 10 }} href="https://github.com/jackpsmith-git" target="_blank">
+                        <img src={github} height={40} />
+                    </a>
+                </div>
+                <div className="shake">
+                    <a style={{ marginRight: 10 }} href="https://www.linkedin.com/in/jackpetersmith" target="_blank">
+                        <img src={linkedin} height={40} />
+                    </a>
+                </div>
+                <div className="shake">
+                    <a href="https://www.nuget.org/profiles/jackpsmith" target="_blank">
+                        <img src={nuget} height={40} />
+                    </a>
+                </div>
             </div>
         </div>
     </div>

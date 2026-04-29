@@ -189,6 +189,29 @@ body {
   transition: transform 0.2s;
 }
 
+.shake {
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  align-items: 'center';
+}
+
+.shake:hover {
+  animation: shake 0.5s;
+}
+
+.shakenopoint {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: 'center';
+}
+
+.shakenopoint:hover {
+  animation: shake 0.5s;
+}
+
 .shakecard:hover {
   animation: shake 0.5s;
 }

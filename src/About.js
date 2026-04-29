@@ -89,7 +89,7 @@ export const About = () => {
 
     <p style={{ textAlign: "center", marginBottom: 40 }}>Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' page to learn more about me.</p>
 
-    <div className="shakecard">
+    <div className="card">
       <h3 style={{ paddingTop: 15 }}>Education</h3>
       <p style={{ paddingLeft: 15, paddingRight: 15, marginBottom: 0 }}><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
       <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>Bachelor of Science (BS) in Computer Science</p>
@@ -101,7 +101,7 @@ export const About = () => {
 
     {user && (
       <div className="insetcard" style={{marginBottom: 40, marginTop: 40}}>
-        <a href="https://www.github.com/jackpsmith-git"><img src={github} style={{display: 'block', margin: '0 auto', width: '10%', height: '10%'}}></img></a>
+        <a href="https://www.github.com/jackpsmith-git" target="_blank"><div className="shake"><img src={github} style={{display: 'block', margin: '0 auto', width: '10%', height: '10%'}}></img></div></a>
         <p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0 }}>
           {user.username}
         </p>   
