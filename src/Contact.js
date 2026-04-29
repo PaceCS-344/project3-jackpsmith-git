@@ -6,7 +6,7 @@ import headshot from "./images/headshot.jpeg"
 export const Contact = () => (
   <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ maxWidth: '1000px' }}>
-  <div className="p-6">
+  <div className="p-6" style={{marginBottom: 40}}>
     <h2 className="text-3xl font-bold mb-4">Contact</h2>
     <div className="floatingtile">
       <img style={{borderRadius: '90%', aspectRatio: 1/1, objectFit: 'cover', objectPosition: 'top', width: 100}} src={headshot}></img>

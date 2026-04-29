@@ -4,8 +4,9 @@ import nuget from "./images/nuget.png"
 import linkedin from "./images/linkedin.png"
 
 export const Footer = () => (
-  <nav className="footer">
-    <div class="flex-grid">
+  <div className="footer">
+  <nav className="footercontent">
+      <div className="flex-grid" style={{marginTop: 5, marginBottom: 5}}>        
         <div class="col">
             <div className="nav-links">
               <Link to="/"><h2 style={{marginBottom: 0}}>Jack P Smith</h2></Link>
@@ -25,13 +26,21 @@ export const Footer = () => (
                 </a>
             </div>
         </div>
-        <div class="col">
-            <p className="nav-links"><Link to="/home" href="/Home">Home</Link></p>
-            <p className="nav-links"><Link to="/about">About</Link></p>
-            <p className="nav-links"><Link to="/skills">Skills</Link></p>
-            <p className="nav-links"><Link to="/projects">Projects</Link></p>
-            <p className="nav-links"><Link to="/contact">Contact</Link></p>
-        </div>
+    </div>
+    <div
+    style={{
+        marginLeft: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end' // ⭐ key
+    }}
+    >
+        <div className="nav-links" style={{marginBottom: 10}}><Link to="/">Home</Link></div>
+        <div className="nav-links" style={{marginBottom: 10}}><Link to="/about">About</Link></div>
+        <div className="nav-links" style={{marginBottom: 10}}><Link to="/skills">Skills</Link></div>
+        <div className="nav-links" style={{marginBottom: 10}}><Link to="/projects">Projects</Link></div>
+        <div className="nav-links" style={{marginBottom: 10}}><Link to="/contact">Contact</Link></div>
     </div>
   </nav>
+  </div>
 );

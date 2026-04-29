@@ -34,7 +34,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export const Skills = () => (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
     <div style={{ maxWidth: '1000px' }}>
-    <div className="p-6">
+    <div className="p-6" style={{marginBottom: 40}}>
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
         <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
             <AccordionSummary

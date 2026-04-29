@@ -82,7 +82,7 @@ export const Projects = () => {
   return (
   <div style={{ display: 'flex', justifyContent: 'center' }}>
   <div style={{ maxWidth: '1000px' }}>
-  <div className="p-6">
+  <div className="p-6" style={{marginBottom: 40}}>
     <h2 className="text-3xl font-bold mb-4">Projects</h2>
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
