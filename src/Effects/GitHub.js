@@ -14,16 +14,16 @@ const REPO_IMAGES = {
   "TermProject" : uno,
 }
 
-export const useLatestRepos = (username) => {
+const USERNAME = "jackpsmith-git";
+
+export const useLatestRepos = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    if (!username) return;
-
     const fetchRepos = async () => {
       try {
         const res = await fetch(
-          `https://api.github.com/users/${username}/repos?sort=updated&per_page=5`
+          `https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=5`
         );
         const data = await res.json();
 
@@ -35,7 +35,6 @@ export const useLatestRepos = (username) => {
         const enriched = await Promise.all(
           data.map(async (repo) => {
             const image = REPO_IMAGES[repo.name];
-
             const languagesRes = await fetch(repo.languages_url);
             const languages = await languagesRes.json();
 
@@ -59,18 +58,18 @@ export const useLatestRepos = (username) => {
     };
 
     fetchRepos();
-  }, [username]);
+  }, [USERNAME]);
 
   return repos;
 };
 
-export const useGitHubUser = (username) => {
+export const useGitHubUser = () => {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const base = `https://api.github.com/users/${username}`;
+        const base = `https://api.github.com/users/${USERNAME}`;
 
         const [userRes, followersRes, orgsRes, starredRes] =
           await Promise.all([
@@ -125,8 +124,8 @@ export const useGitHubUser = (username) => {
       }
     };
 
-    if (username) fetchUser();
-  }, [username]);
+    fetchUser();
+  }, [USERNAME]);
 
   return userInfo;
 };

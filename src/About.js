@@ -5,7 +5,7 @@ import headshot from "./images/headshot.jpeg"
 import github from "./images/github.png"
 
 export const About = () => {
-  const user = useGitHubUser("jackpsmith-git");
+  const user = useGitHubUser();
 
   return (
   <div className="p-6"><div className="page-container">

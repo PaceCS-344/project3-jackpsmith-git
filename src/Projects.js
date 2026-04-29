@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import github from "./images/github.png"
 
 export const Projects = () => {
-  const repos = useLatestRepos("jackpsmith-git");
+  const repos = useLatestRepos();
 
   return (
   <div style={{ display: 'flex', justifyContent: 'center' }}><div style={{ maxWidth: '1000px' }}><div className="p-6" style={{marginBottom: 40}}>
