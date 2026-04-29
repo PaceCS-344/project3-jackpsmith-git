@@ -84,36 +84,31 @@ const SECTIONS = {
     "Operating Systems" : OPERATING_SYSTEMS,
 }
 
-export const Skills = () => {
-    return (
-    <div className="p-6"><div className="page-container">
-        <h2 className="text-3xl font-bold mb-4">Skills</h2>
+export const Skills = () => { return (
+<div className="p-6"><div className="page-container">
+    <h2 className="text-3xl font-bold mb-4">Skills</h2>
 
-        {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
-            <div key={sectionKey}>
-                <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1-content"
-                        id="panel1-header"
-                    >
-                    <h3>{sectionKey}</h3>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <div className="skills-grid">
-                        {Object.entries(sectionValue).map(([key, value]) => (
-                            <div key={key}>
-                                <div className="insetcard">
-                                    <div className="shakenopoint"><img src={value} width="100%" /></div>
-                                    <h2>{key}</h2>
-                                </div>
-                            </div>
-                        ))}
-                        </div>
-                    </AccordionDetails>
-                </Accordion>
-            </div>
-        ))}
-    </div></div>
-    );
-};
+    {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
+        <div key={sectionKey}><Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
+            <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1-content"
+                id="panel1-header"
+            >
+            <h3>{sectionKey}</h3>
+            </AccordionSummary>
+            
+            <AccordionDetails>
+                <div className="skills-grid">
+                {Object.entries(sectionValue).map(([key, value]) => (
+                    <div key={key}><div className="insetcard">
+                        <div className="shakenopoint"><img src={value} width="100%" /></div>
+                        <h2>{key}</h2>
+                    </div></div>
+                ))}
+                </div>
+            </AccordionDetails>
+        </Accordion></div>
+    ))}
+</div></div>
+);};

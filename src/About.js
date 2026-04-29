@@ -76,11 +76,7 @@ export const About = () => {
   return (
   <div className="p-6"><div className="page-container">
     <h2 className="text-3xl font-bold mb-4">About Me</h2>
-
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <img style={{ margin: 20 }} src={headshot} alt="Headshot" width={200} />
-    </div>
-
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><img style={{ margin: 20 }} src={headshot} alt="Headshot" width={200} /></div>
     {user && (<div><p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0, marginTop: 5 }}>{user.bio}</p></div>)}
     <p style={{ textAlign: "center", marginBottom: 40 }}>Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' page to learn more about me.</p>
 
