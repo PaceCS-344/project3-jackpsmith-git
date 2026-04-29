@@ -1,5 +1,6 @@
-import { Button } from './Button.js';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Button } from './Components/Button.js'
+import { ShakeCard } from './Components/ShakeCard.js'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
 import cataclysm from "./images/Cataclysm.png"
 import shaderSandbox from "./images/ShaderSandbox.png"
@@ -35,13 +36,11 @@ export const Home = () => { return (
   <div className="flex-grid">
     {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
       <div className="col" key={name}>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <div className="shakecard">
-            <img src={image} alt="" width="100%" />
-            <h3 style={{ paddingTop: 12, textAlign: 'left' }}>{name} ({languages})</h3>
-            <p>{description}</p>
-          </div>
-        </a>
+        <ShakeCard href={link}>
+          <img src={image} alt="" width="100%" />
+          <h3 style={{ paddingTop: 12, textAlign: 'left' }}>{name} ({languages})</h3>
+          <p>{description}</p>
+        </ShakeCard>
       </div>
     ))}
   </div>

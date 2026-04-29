@@ -1,74 +1,8 @@
-import { useState, useEffect } from "react";
+import { useGitHubUser } from "./Effects/GitHub.js";
+import { ThinParagraph } from "./Components/ThinParagraph.js";
 
 import headshot from "./images/headshot.jpeg"
 import github from "./images/github.png"
-
-export const useGitHubUser = (username) => {
-  const [userInfo, setUserInfo] = useState(null);
-
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const base = `https://api.github.com/users/${username}`;
-
-        const [userRes, followersRes, orgsRes, starredRes] =
-          await Promise.all([
-            fetch(base),
-            fetch(`${base}/followers?per_page=100`),
-            fetch(`${base}/orgs`),
-            fetch(`${base}/starred?per_page=100`)
-          ]);
-
-        const user = await userRes.json();
-        const followers = await followersRes.json();
-        const orgs = await orgsRes.json();
-        const starred = await starredRes.json();
-
-        if (!user || user.message === "Not Found") {
-          console.error("GitHub API error:", user);
-          return;
-        }
-
-        const enriched = {
-          username: user.login,
-          name: user.name,
-          bio: user.bio,
-          avatar: user.avatar_url,
-          profileUrl: user.html_url,
-
-          followersCount: user.followers,
-          followers: Array.isArray(followers)
-            ? followers.map((f) => f.login)
-            : [],
-
-          organizations: Array.isArray(orgs)
-            ? orgs.map((o) => o.login)
-            : [],
-
-          starredReposCount: Array.isArray(starred)
-            ? starred.length
-            : 0,
-
-          starredRepos: Array.isArray(starred)
-            ? starred.map((r) => ({
-                name: r.name,
-                url: r.html_url,
-                stars: r.stargazers_count,
-              }))
-            : [],
-        };
-
-        setUserInfo(enriched);
-      } catch (err) {
-        console.error("GitHub fetch failed:", err);
-      }
-    };
-
-    if (username) fetchUser();
-  }, [username]);
-
-  return userInfo;
-};
 
 export const About = () => {
   const user = useGitHubUser("jackpsmith-git");
@@ -83,11 +17,11 @@ export const About = () => {
     <div className="card">
       <h3 style={{ paddingTop: 15 }}>Education</h3>
       <p style={{ paddingLeft: 15, paddingRight: 15, marginBottom: 0 }}><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
-      <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>Bachelor of Science (BS) in Computer Science</p>
-      <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}><strong>GPA</strong>: 3.89 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</p>
+      <ThinParagraph>Bachelor of Science (BS) in Computer Science</ThinParagraph>
+      <ThinParagraph><strong>GPA</strong>: 3.89 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</ThinParagraph>
       <p style={{ paddingLeft: 15, paddingRight: 15, marginBottom: 0 }}><strong>SUNY Westchester Community College, School of Business and Professional Careers</strong> | Valhalla, NY</p>
-      <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>Associate of Applied Science (AAS) in Interactive Technologies, Concentration in Computer Animation and Game Design</p>
-      <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}><strong>GPA</strong>: 3.44</p>
+      <ThinParagraph>Associate of Applied Science (AAS) in Interactive Technologies, Concentration in Computer Animation and Game Design</ThinParagraph>
+      <ThinParagraph><strong>GPA</strong>: 3.44</ThinParagraph>
     </div>
 
     {user && (

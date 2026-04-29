@@ -4,6 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Badge from '@mui/material/Badge';
 
+import { Shake } from './Components/Shake.js';
+
 import cpp from "./images/cpp.png"
 import csharp from "./images/csharp.png"
 import java from "./images/java.png"
@@ -102,7 +104,7 @@ export const Skills = () => { return (
                 <div className="skills-grid">
                 {Object.entries(sectionValue).map(([key, value]) => (
                     <div key={key}><div className="insetcard">
-                        <div className="shakenopoint"><img src={value} width="100%" /></div>
+                        <Shake><img src={value} width="100%" /></Shake>
                         <h2>{key}</h2>
                     </div></div>
                 ))}

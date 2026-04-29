@@ -89,22 +89,6 @@ body {
   text-decoration: underline;
 }
 
-.nav-links-vertical {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.nav-links-vertical a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links-vertical a:hover {
-  text-decoration: underline;
-}
-
 .p-6 {
   padding: 24px;
 }

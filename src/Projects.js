@@ -1,74 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button.js';
-import GitHubButton from 'react-github-btn';
+import { Button } from './Components/Button.js';
+import { useLatestRepos } from './Effects/GitHub.js';
 
+import GitHubButton from 'react-github-btn';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import github from "./images/github.png"
-import cataclysm from "./images/Cataclysm.png"
-import shadersandbox from "./images/ShaderSandbox.png"
-import pcr from "./images/PointCloudRenderer.png"
-import forge from "./images/forge.png"
-import uno from "./images/TermProject.png"
-
-const REPO_IMAGES = {
-  "ShaderSandbox" : shadersandbox,
-  "Cataclysm" : cataclysm,
-  "PointCloudRenderer" : pcr,
-  "Forge" : forge,
-  "TermProject" : uno,
-}
 
 export const Projects = () => {
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        const res = await fetch(
-          "https://api.github.com/users/jackpsmith-git/repos?sort=updated&per_page=5"
-        );
-        const data = await res.json();
-
-        if (!Array.isArray(data)) {
-          console.error("GitHub API error:", data);
-          return;
-        }
-
-        const enriched = await Promise.all(
-          data.map(async (repo) => {
-            const image = REPO_IMAGES[repo.name];
-            const [languagesRes] =
-              await Promise.all([
-                fetch(repo.languages_url),
-              ]);
-
-            const languages = await languagesRes.json();
-
-            return {
-              name: repo.name,
-              description: repo.description,
-              url: repo.html_url,
-              stars: repo.stargazers_count,
-              watchers: repo.watchers_count,
-              issues: repo.open_issues_count,
-              languages: Object.keys(languages),
-              image: image,
-            };
-          })
-        );
-
-        setRepos(enriched);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchRepos();
-  }, []);
+  const repos = useLatestRepos("jackpsmith-git");
 
   return (
   <div style={{ display: 'flex', justifyContent: 'center' }}><div style={{ maxWidth: '1000px' }}><div className="p-6" style={{marginBottom: 40}}>
