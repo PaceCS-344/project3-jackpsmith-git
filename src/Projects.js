@@ -95,7 +95,7 @@ export const Projects = () => {
           </AccordionSummary>
 
           <AccordionDetails>
-            <hr></hr>
+            <hr style={{marginTop: 0, paddingTop: 0}}></hr>
             <p>{repo.description}</p>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span><GitHubButton href={`${repo.url}`} data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" data-size="large" aria-label="Source Code">Source Code</GitHubButton></span>
