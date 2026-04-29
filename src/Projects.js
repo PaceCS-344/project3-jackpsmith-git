@@ -12,8 +12,8 @@ import react from "./images/react.png"
 import uno from "./images/TermProject.png"
 
 const LANG_COLS = {
-  "C": '#041e42',
-  "Objective-C" : '#041e42',
+  "C": '#064090',
+  "Objective-C" : '#064090',
   "C++" : '#041e42',
   "Objective-C++" : '#041e42',
   "C#": '#68217A',
@@ -75,11 +75,11 @@ export const Projects = () => {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span><h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3></span>
               <span style={{ display: "inline-flex", gap: "6px", flexWrap: "wrap", marginLeft: 15 }}>
-                {repo.languages.slice(0, 8).map((lang) => (
+                {repo.languages.slice(0, 12).map((lang) => (
                   <span
                     key={lang}
                     style={{
-                      backgroundColor: LANG_COLS[lang] || "#000000", // fallback color
+                      backgroundColor: LANG_COLS[lang] || "#000000",
                       color: "white",
                       padding: "4px 8px",
                       borderRadius: "999px",
@@ -87,7 +87,7 @@ export const Projects = () => {
                       whiteSpace: "nowrap",
                     }}
                   >
-                    {lang}
+                  {lang}
                   </span>
                 ))}
               </span>
