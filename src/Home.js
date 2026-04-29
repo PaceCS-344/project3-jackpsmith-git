@@ -45,7 +45,7 @@ export const Home = () => { return (
     ))}
   </div>
 
-  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: 15, paddingBottom: 15 }}><div className="shake"><Link to="/Projects"><Button><h3 style={{marginLeft: 12, marginRight: 12, marginTop: 8, marginBottom: 8}}>All Projects</h3></Button></Link></div></div>
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: 15, paddingBottom: 15 }}><div className="shake"><Link to="/Projects"><Button><h3 style={{marginLeft: 12, marginRight: 12, marginTop: 8, marginBottom: 8}}>See More</h3></Button></Link></div></div>
   <hr style={{marginTop: 40}}/>
 
   <div style={{ textAlign: 'center', padding: '60px 20px' }}>

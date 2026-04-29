@@ -19,7 +19,7 @@ const LANG_COLS = {
   "C#": '#68217A',
   "JavaScript": 'darkorange',
   "Python": '#0B6623',
-  "Lua": '#808080',
+  "Lua": '#6e6a39',
   "Batchfile" : "#000000",
   "CMake" : 'green',
   "HTML" : '#E34C26',
@@ -111,6 +111,9 @@ export const Projects = () => {
         </Accordion>
       ))}
     </div></div>
+
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: 40, paddingBottom: 15 }}><div className="shake"><a href="https://github.com/jackpsmith-git?tab=repositories" target="_blank"><Button><h3 style={{marginLeft: 12, marginRight: 12, marginTop: 8, marginBottom: 8}}>All Projects</h3></Button></a></div></div>
+
   </div></div></div>
   );
 };
