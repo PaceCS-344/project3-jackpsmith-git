@@ -1,0 +1,63 @@
+import { Button } from './Components/Button.js';
+import { useLatestRepos } from './Effects/GitHub.js';
+
+import GitHubButton from 'react-github-btn';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import github from "./images/github.png"
+
+export const Projects = () => {
+  const repos = useLatestRepos();
+
+  return (
+  <div style={{ display: 'flex', justifyContent: 'center' }}><div style={{ maxWidth: '1000px' }}><div className="p-6" style={{marginBottom: 40}}>
+    <h2 className="text-3xl font-bold mb-4">Projects</h2>
+    <div style={{ display: 'flex', justifyContent: 'center' }}><div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {repos.map((repo) => (
+        <Accordion key={repo.name}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            {repo.image ? (
+                <img
+                src={repo.image}
+                alt={repo.name}
+                style={{
+                  width: 100,
+                  height: 50,
+                  objectFit: "cover",
+                  borderRadius: 8,
+                  marginRight: 12
+                }}
+              />
+            ) : (
+              <div style={{width: 100, height: 50}} />
+            )}
+            
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span><h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3></span>
+              <span><p style={{ paddingLeft: 10, margin: 0, textAlign: 'left'}}>({repo.languages.slice(0, 8).join(", ")})</p></span>
+            </div>
+          </AccordionSummary>
+
+          <AccordionDetails>
+            <hr></hr>
+            <p>{repo.description}</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span><GitHubButton href={`${repo.url}`} data-color-scheme="no-preference: light; light: light; dark: dark;" data-show-count="false" data-size="large" aria-label="Source Code">Source Code</GitHubButton></span>
+              <span>
+                <div className="insetcard" style={{ margin: 0, display: 'flex', flexDirection: 'row', alignItems: 'center', padding: 4, paddingLeft: 8, paddingRight: 8, borderRadius: 4, boxShadow: 'inset 0 2px 3px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgb(247, 247, 247)'}}>
+                  <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}</span>
+                  <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>👁</strong> {repo.watchers}</span>
+                  <span style={{alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>⚠</strong> {repo.issues}</span>
+                </div>
+              </span>
+            </div>
+          </AccordionDetails>
+        </Accordion>
+      ))}
+    </div></div>
+  </div></div></div>
+  );
+};
