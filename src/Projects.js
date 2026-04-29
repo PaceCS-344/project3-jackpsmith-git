@@ -8,6 +8,23 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import github from "./images/github.png"
+import react from "./images/react.png"
+
+const LANG_COLS = {
+  "C": '#041e42',
+  "Objective-C" : '#041e42',
+  "C++" : '#041e42',
+  "Objective-C++" : '#041e42',
+  "C#": '#68217A',
+  "JavaScript": 'darkorange',
+  "Python": '#0B6623',
+  "Lua": '#808080',
+  "Batchfile" : "#000000",
+  "CMake" : 'green',
+  "HTML" : '#E34C26',
+  "CSS" : '#663399',
+  "Java" : '#007396'
+};
 
 export const Projects = () => {
   const repos = useLatestRepos();
@@ -19,8 +36,8 @@ export const Projects = () => {
       {repos.map((repo) => (
         <Accordion key={repo.name}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            {repo.image ? (
-                <img
+            {repo.image ? ( repo.image != react ?
+                (<img
                 src={repo.image}
                 alt={repo.name}
                 style={{
@@ -30,7 +47,17 @@ export const Projects = () => {
                   borderRadius: 8,
                   marginRight: 12
                 }}
-              />
+              />) : (
+                <img src={repo.image}
+                  alt={repo.name}
+                  style={{
+                    width: 100,
+                    height: 50,
+                    objectFit: "contain",
+                    borderRadius: 8,
+                    marginRight: 12
+                  }}/>
+                )
             ) : (
               <img src={github}
                 alt="GitHub Logo"
@@ -46,7 +73,24 @@ export const Projects = () => {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span><h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3></span>
-              <span><p style={{ paddingLeft: 10, margin: 0, textAlign: 'left'}}>({repo.languages.slice(0, 8).join(", ")})</p></span>
+              {/* <span><p style={{ paddingLeft: 10, margin: 0, textAlign: 'left'}}>({repo.languages.slice(0, 8).join(", ")})</p></span> */}
+              <span style={{ display: "inline-flex", gap: "6px", flexWrap: "wrap", marginLeft: 15 }}>
+                {repo.languages.slice(0, 8).map((lang) => (
+                  <span
+                    key={lang}
+                    style={{
+                      backgroundColor: LANG_COLS[lang] || "#000000", // fallback color
+                      color: "white",
+                      padding: "4px 8px",
+                      borderRadius: "999px",
+                      fontSize: "10px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </span>
             </div>
           </AccordionSummary>
 
