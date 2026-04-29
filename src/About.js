@@ -95,27 +95,27 @@ export const About = () => {
             <div className="shakecard">
               <h3 style={{ paddingTop: 15 }}>Education</h3>
 
-              <p style={{ paddingLeft: 15, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginBottom: 0 }}>
                 <strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY
               </p>
 
-              <p style={{ paddingLeft: 15, marginTop: 0, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>
                 Bachelor of Science (BS) in Computer Science
               </p>
 
-              <p style={{ paddingLeft: 15, marginTop: 0, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>
                 <strong>GPA</strong>: 3.89 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society
               </p>
 
-              <p style={{ paddingLeft: 15, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginBottom: 0 }}>
                 <strong>SUNY Westchester Community College, School of Business and Professional Careers</strong> | Valhalla, NY
               </p>
 
-              <p style={{ paddingLeft: 15, marginTop: 0, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>
                 Associate of Applied Science (AAS) in Interactive Technologies, Concentration in Computer Animation and Game Design
               </p>
 
-              <p style={{ paddingLeft: 15, marginTop: 0, marginBottom: 0 }}>
+              <p style={{ paddingLeft: 15, paddingRight: 15, marginTop: 0, marginBottom: 0 }}>
                 <strong>GPA</strong>: 3.44
               </p>
             </div>   
