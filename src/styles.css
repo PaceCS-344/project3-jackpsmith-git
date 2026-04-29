@@ -74,6 +74,21 @@ body {
   text-decoration: underline;
 }
 
+.hf-nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.hf-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hf-nav-links a:hover {
+  text-decoration: underline;
+}
+
 .nav-links-vertical {
   display: flex;
   flex-wrap: wrap;

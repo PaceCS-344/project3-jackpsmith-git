@@ -17,7 +17,7 @@ export const Footer = () => (
             <div className="row" style={{ display: 'flex', alignItems: 'center' }}>
                 <div className="shake">
                     <a style={{ marginRight: 10 }} href="https://github.com/jackpsmith-git" target="_blank">
-                        <img src={github} height={40} />
+                        <img src={github} height={40} style={{backgroundColor: 'white', maskImage: `url(${github})`, maskSize: 'contain', filter: 'brightness(0) invert(1)'}} />
                     </a>
                 </div>
                 <div className="shake">
@@ -27,7 +27,7 @@ export const Footer = () => (
                 </div>
                 <div className="shake">
                     <a href="https://www.nuget.org/profiles/jackpsmith" target="_blank">
-                        <img src={nuget} height={40} />
+                        <img src={nuget} height={40} style={{backgroundColor: 'white', maskImage: `url(${nuget})`, maskSize: 'contain', filter: 'brightness(0) invert(1)'}} />
                     </a>
                 </div>
             </div>
@@ -42,11 +42,11 @@ export const Footer = () => (
             alignItems: 'flex-end'
         }}
         >
-        <div className="nav-links" style={{marginBottom: 10}}><Link to="/">Home</Link></div>
-        <div className="nav-links" style={{marginBottom: 10}}><Link to="/about">About</Link></div>
-        <div className="nav-links" style={{marginBottom: 10}}><Link to="/skills">Skills</Link></div>
-        <div className="nav-links" style={{marginBottom: 10}}><Link to="/projects">Projects</Link></div>
-        <div className="nav-links" style={{marginBottom: 10}}><Link to="/contact">Contact</Link></div>
+        <div className="hf-nav-links" style={{marginBottom: 20}}><Link to="/">Home</Link></div>
+        <div className="hf-nav-links" style={{marginBottom: 20}}><Link to="/about">About</Link></div>
+        <div className="hf-nav-links" style={{marginBottom: 20}}><Link to="/skills">Skills</Link></div>
+        <div className="hf-nav-links" style={{marginBottom: 20}}><Link to="/projects">Projects</Link></div>
+        <div className="hf-nav-links" style={{marginBottom: 20}}><Link to="/contact">Contact</Link></div>
     </div>
   </nav>
   </div>

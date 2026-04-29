@@ -12,7 +12,7 @@ export const Navbar = () => (
             <h3 style={{marginLeft: 0, marginRight: 0, textAlign: 'left'}}>Software Developer</h3>
         </div>
       </div>
-      <div className="nav-links" style={{marginLeft: 'auto'}}>
+      <div className="hf-nav-links" style={{marginLeft: 'auto'}}>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/skills">Skills</Link>
