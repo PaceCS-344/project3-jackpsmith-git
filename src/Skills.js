@@ -13,12 +13,15 @@ import html from "./images/html.png"
 import css from "./images/css.png"
 import php from "./images/php.png"
 import lua from "./images/lua.png"
+
 import opengl from "./images/opengl.png"
 import nodejs from "./images/nodejs.png"
 import react from "./images/react.png"
 import bootstrap from "./images/bootstrap.png"
 import vulkan from "./images/vulkan.png"
 import dotnet from "./images/dotnet.png"
+import fastapi from "./images/FastAPI.png"
+
 import visualstudio from "./images/visualstudio.png"
 import vscode from "./images/vscode.png"
 import git from "./images/git.png"
@@ -27,11 +30,11 @@ import unity from "./images/unity.png"
 import docker from "./images/docker.png"
 import mysql from "./images/mysql.png"
 import cmake from "./images/cmake.png"
+
 import windows from "./images/windows.png"
 import linux from "./images/linux.png"
 import apple from "./images/apple.png"
 import android from "./images/android.png"
-import fastapi from "./images/FastAPI.png"
 
 const PROGRAMMING_LANGUAGES = {
   "C/C++" : cpp,
@@ -74,98 +77,43 @@ const OPERATING_SYSTEMS = {
     "Android" : android,
 }
 
+const SECTIONS = {
+    "Programming Languages" : PROGRAMMING_LANGUAGES,
+    "Frameworks/Libraries" : FRAMEWORKS,
+    "Development Tools" : DEVTOOLS,
+    "Operating Systems" : OPERATING_SYSTEMS,
+}
+
 export const Skills = () => {
     return (
     <div className="p-6"><div className="page-container">
         <h2 className="text-3xl font-bold mb-4">Skills</h2>
-        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
-                
-            >
-            <h3>Programming Languages</h3>
-            </AccordionSummary>
-            <AccordionDetails>
-                <div className="skills-grid">
-                {Object.entries(PROGRAMMING_LANGUAGES).map(([key, value]) => (
-                    <div>
-                        <div className="insetcard">
-                            <div className="shakenopoint"><img src={value} width="100%" /></div>
-                            <h2>{key}</h2>
-                        </div>
-                    </div>
-                ))}
-                </div>
-            </AccordionDetails>
-        </Accordion>
 
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2-content"
-                id="panel2-header"
-            >
-            <h3>Frameworks/Libraries</h3>
-            </AccordionSummary>
-            <AccordionDetails>
-                <div className="skills-grid">
-                {Object.entries(FRAMEWORKS).map(([key, value]) => (
-                    <div>
-                        <div className="insetcard">
-                            <div className="shakenopoint"><img src={value} width="100%" /></div>
-                            <h2>{key}</h2>
+        {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
+            <div key={sectionKey}>
+                <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                    >
+                    <h3>{sectionKey}</h3>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <div className="skills-grid">
+                        {Object.entries(sectionValue).map(([key, value]) => (
+                            <div key={key}>
+                                <div className="insetcard">
+                                    <div className="shakenopoint"><img src={value} width="100%" /></div>
+                                    <h2>{key}</h2>
+                                </div>
+                            </div>
+                        ))}
                         </div>
-                    </div>
-                ))}
-                </div>
-            </AccordionDetails>
-        </Accordion>
-
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel3-content"
-                id="panel3-header"
-            >
-            <h3>Development Tools</h3>
-            </AccordionSummary>
-            <AccordionDetails>
-                <div className="skills-grid">
-                {Object.entries(DEVTOOLS).map(([key, value]) => (
-                    <div>
-                        <div className="insetcard">
-                            <div className="shakenopoint"><img src={value} width="100%" /></div>
-                            <h2>{key}</h2>
-                        </div>
-                    </div>
-                ))}
-                </div>
-            </AccordionDetails>
-        </Accordion>
-
-        <Accordion slotProps={{ heading: { component: 'h2' } }}>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel4-content"
-                id="panel4-header"
-            >
-            <h3>Operating Systems</h3>
-            </AccordionSummary>
-            <AccordionDetails>
-                <div className="skills-grid">
-                {Object.entries(OPERATING_SYSTEMS).map(([key, value]) => (
-                    <div>
-                        <div className="insetcard">
-                            <div className="shakenopoint"><img src={value} width="100%" /></div>
-                            <h2>{key}</h2>
-                        </div>
-                    </div>
-                ))}
-                </div>
-            </AccordionDetails>
-        </Accordion>
+                    </AccordionDetails>
+                </Accordion>
+            </div>
+        ))}
     </div></div>
     );
 };

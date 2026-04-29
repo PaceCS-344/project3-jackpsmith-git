@@ -225,3 +225,8 @@ body {
   padding-top: 20;
   padding-bottom: 40;
 }
+
+.footer-link {
+  padding-bottom: 5;
+  margin: 0;
+}
