@@ -13,7 +13,8 @@ export const Footer = () => (
             </div>            
             <h3 style={{textAlign: 'left'}}>Software Developer</h3>
             <p style={{marginBottom: 0}} className="nav-links"><Link to="mailto:jackpsmith@jackpsmith.com">jackpsmith@jackpsmith.com</Link></p>
-            <p style={{marginBottom: 20, marginTop: 0}} className="nav-links"><Link to="mailto:js99564p@pace.edu">js99564p@pace.edu</Link></p>
+            <p style={{marginBottom: 0, marginTop: 0}} className="nav-links"><Link to="mailto:js99564p@pace.edu">js99564p@pace.edu</Link></p>
+            <p style={{marginBottom: 20, marginTop: 0}} className="nav-links"><Link to="mailto:jpsmith8603@gmail.com">jpsmith8603@gmail.com</Link></p>
             <div class="row">
                 <a style={{marginRight: 10}} href="https://github.com/jackpsmith-git">
                     <img src={github} height={40}></img>
