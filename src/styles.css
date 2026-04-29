@@ -169,6 +169,12 @@ homepagebody {
   padding: 5px;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
 @keyframes shake {
   0% { transform: translateX(0); }
   25% { transform: translateX(-5px); }
@@ -185,7 +191,7 @@ homepagebody {
   color: #323232;
   background-color: rgb(237, 237, 237);
   min-height: 200px;
-  max-width: 1000px;
+  max-width: fit-content;
   cursor: pointer;
   transition: transform 0.2s;
 }

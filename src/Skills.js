@@ -30,6 +30,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Badge from '@mui/material/Badge';
 
 export const Skills = () => (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -46,51 +47,51 @@ export const Skills = () => (
                 <h3>Programming Languages</h3>
             </AccordionSummary>
             <AccordionDetails>
-                <div className="flex-grid">
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={cpp} width="100%"></img>
-                            <h2 style={{margin: 0}} >C/C++</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={javascript} width="100%"></img>
-                            <h2 style={{margin: 0}} >JavaScript</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={lua} width="100%"></img>
-                            <h2 style={{margin: 0}} >Lua</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={csharp} width="100%"></img>
-                            <h2 style={{margin: 0}} >C#</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={html} width="100%"></img>
-                            <h2 style={{margin: 0}} >HTML</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={java} width="100%"></img>
-                            <h2 style={{margin: 0}} >Java</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={css} width="100%"></img>
-                            <h2 style={{margin: 0}} >CSS</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={python} width="100%"></img>
-                            <h2 style={{margin: 0}} >Python</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={php} width="100%"></img>
-                            <h2 style={{margin: 0}} >PHP</h2>
-                        </div>
-                    </div>
+                <div className="skills-grid">
+                <div className="insetcard">
+                    <img src={cpp} width="100%" />
+                    <h2>C/C++</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={python} width="100%" />
+                    <h2>Python</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={java} width="100%" />
+                    <h2>Java</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={csharp} width="100%" />
+                    <h2>C#</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={javascript} width="100%" />
+                    <h2>JavaScript</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={html} width="100%" />
+                    <h2>HTML</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={css} width="100%" />
+                    <h2>CSS</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={lua} width="100%" />
+                    <h2>Lua</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={php} width="100%" />
+                    <h2>PHP</h2>
+                </div>
                 </div>
             </AccordionDetails>
         </Accordion>
@@ -104,39 +105,31 @@ export const Skills = () => (
                 <h3>Frameworks/Libraries</h3>
             </AccordionSummary>
             <AccordionDetails>
-                <div className="flex-grid">
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={opengl} width="100%"></img>
-                            <h2 style={{margin: 0}} >OpenGL</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={dotnet} width="100%"></img>
-                            <h2 style={{margin: 0}} >.NET/ASP.NET</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={vulkan} width="100%"></img>
-                            <h2 style={{margin: 0}} >Vulkan</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={nodejs} width="100%"></img>
-                            <h2 style={{margin: 0}} >node.js</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={react} width="100%"></img>
-                            <h2 style={{margin: 0}} >React</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={bootstrap} width="100%"></img>
-                            <h2 style={{margin: 0}} >Bootstrap</h2>
-                        </div>
-                    </div>
+                <div className="skills-grid">
+                <div className="insetcard">
+                    <img src={opengl} width="100%" />
+                    <h2>OpenGL</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={vulkan} width="100%" />
+                    <h2>Vulkan</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={react} width="100%" />
+                    <h2>React</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={dotnet} width="100%" />
+                    <h2>.NET/ASP.NET</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={nodejs} width="100%" />
+                    <h2>node.js</h2>
+                </div>
                 </div>
             </AccordionDetails>
         </Accordion>
@@ -150,47 +143,39 @@ export const Skills = () => (
                 <h3>Development Tools</h3>
             </AccordionSummary>
             <AccordionDetails>
-                <div className="flex-grid">
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={visualstudio} width="100%"></img>
-                            <h3 style={{margin: 0}} >Visual Studio 2022/2026</h3>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}} src={docker} width="100%"></img>
-                            <h2 style={{margin: 0}} >Docker</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img  style={{margin: 0}} src={vscode} width="100%"></img>
-                            <h2 style={{margin: 0}} >Visual Studio Code</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={unity} width="100%"></img>
-                            <h2 style={{margin: 0}} >Unity</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={git} width="100%"></img>
-                            <h2 style={{margin: 0}} >Git</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={mysql} width="100%"></img>
-                            <h2 style={{margin: 0}} >MySQL/ MariaDB</h2>
-                        </div>
-                    </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={github} width="100%"></img>
-                            <h2 style={{margin: 0}} >GitHub</h2>
-                        </div>
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={cmake} width="100%"></img>
-                            <h2 style={{margin: 0}} >CMake</h2>
-                        </div>
-                    </div>
+                <div className="skills-grid">
+                <div className="insetcard">
+                    <img src={visualstudio} width="100%" />
+                    <h2>Visual Studio</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={vscode} width="100%" />
+                    <h2>VS Code</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={git} width="100%" />
+                    <h2>Git</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={github} width="100%" />
+                    <h2>GitHub</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={unity} width="100%" />
+                    <h2>Unity</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={docker} width="100%" />
+                    <h2>Docker</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={mysql} width="100%" />
+                    <h2>MySQL/MariaDB</h2>
+                </div>
+                <div className="insetcard">
+                    <img src={cmake} width="100%" />
+                    <h2>CMake</h2>
+                </div>
                 </div>
             </AccordionDetails>
         </Accordion>
@@ -204,30 +189,22 @@ export const Skills = () => (
                 <h3>Operating Systems</h3>
             </AccordionSummary>
             <AccordionDetails>
-                <div className="flex-grid">
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={windows} width="100%"></img>
-                            <h2 style={{margin: 0}} >Windows</h2>
-                        </div>
+                <div className="skills-grid">
+                    <div className="insetcard">
+                        <img src={windows} width="100%" />
+                        <h2>Windows</h2>
                     </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={android} width="100%"></img>
-                            <h2 style={{margin: 0}} >Android</h2>
-                        </div>
+                    <div className="insetcard">
+                        <img src={linux} width="100%" />
+                        <h2>Unix/Linux</h2>
                     </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={linux} width="100%"></img>
-                            <h2 style={{margin: 0}} >Unix/Linux</h2>
-                        </div>
+                    <div className="insetcard">
+                        <img src={apple} width="100%" />
+                        <h2>MacOS</h2>
                     </div>
-                    <div className="skinnycol">
-                        <div className="insetcard">
-                            <img style={{margin: 0}}  src={apple} width="100%"></img>
-                            <h2 style={{margin: 0}} >MacOS</h2>
-                        </div>
+                    <div className="insetcard">
+                        <img src={android} width="100%" />
+                        <h2>Android</h2>
                     </div>
                 </div>
             </AccordionDetails>
