@@ -25,6 +25,7 @@ import windows from "./images/windows.png"
 import linux from "./images/linux.png"
 import apple from "./images/apple.png"
 import android from "./images/android.png"
+import fastapi from "./images/FastAPI.png"
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -122,6 +123,11 @@ export const Skills = () => (
                 </div>
 
                 <div className="insetcard">
+                    <img src={bootstrap} width="100%" />
+                    <h2>Boostrap</h2>
+                </div>
+
+                <div className="insetcard">
                     <img src={dotnet} width="100%" />
                     <h2>.NET/ASP.NET</h2>
                 </div>
@@ -129,6 +135,11 @@ export const Skills = () => (
                 <div className="insetcard">
                     <img src={nodejs} width="100%" />
                     <h2>node.js</h2>
+                </div>
+
+                <div className="insetcard">
+                    <img src={fastapi} width="100%" />
+                    <h2>FastAPI</h2>
                 </div>
                 </div>
             </AccordionDetails>
