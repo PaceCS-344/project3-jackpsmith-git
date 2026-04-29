@@ -84,9 +84,13 @@ export const About = () => {
               <img style={{ margin: 20 }} src={headshot} alt="Headshot" width={200} />
             </div>
 
-            <p style={{ textAlign: "center" }}>
-              Hi, I'm Jack. I am currently a student at Pace University pursuing a Bachelor of Science in Computer Science.
-            </p>
+            {user && (
+              <div>
+                  <p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0, marginTop: 5 }}>
+                    {user.bio}
+                  </p>
+              </div>
+            )}
 
             <p style={{ textAlign: "center", marginBottom: 40 }}>
               Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' page to learn more about me.
@@ -121,15 +125,12 @@ export const About = () => {
             </div>   
               {user && (
                 <div className="insetcard" style={{marginBottom: 40, marginTop: 40}}>
-                  <img src={github} height={40} style={{display: 'block', margin: '0 auto', width: '15%', height: '15%'}}></img>
+                  <a href="https://www.github.com/jackpsmith-git"><img src={github} style={{display: 'block', margin: '0 auto', width: '10%', height: '10%'}}></img></a>
                   <p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0 }}>
                     {user.username}
                   </p>   
                   <p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0, marginTop: 5 }}>
-                    ★ {user.starredReposCount}
-                  </p>
-                  <p style={{ textAlign: "center", paddingBottom: 0, marginBottom: 0, marginTop: 5 }}>
-                    Followers: {user.followersCount}
+                    Followers: {user.followersCount} | ★ {user.starredReposCount}
                   </p>
                 </div>
               )}
