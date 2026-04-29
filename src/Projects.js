@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import github from "./images/github.png"
 import react from "./images/react.png"
+import uno from "./images/TermProject.png"
 
 const LANG_COLS = {
   "C": '#041e42',
@@ -36,7 +37,7 @@ export const Projects = () => {
       {repos.map((repo) => (
         <Accordion key={repo.name}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            {repo.image ? ( repo.image != react ?
+            {repo.image ? ( repo.image != react && repo.image != uno ?
                 (<img
                 src={repo.image}
                 alt={repo.name}
@@ -73,7 +74,6 @@ export const Projects = () => {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span><h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3></span>
-              {/* <span><p style={{ paddingLeft: 10, margin: 0, textAlign: 'left'}}>({repo.languages.slice(0, 8).join(", ")})</p></span> */}
               <span style={{ display: "inline-flex", gap: "6px", flexWrap: "wrap", marginLeft: 15 }}>
                 {repo.languages.slice(0, 8).map((lang) => (
                   <span
