@@ -32,7 +32,16 @@ export const Projects = () => {
                 }}
               />
             ) : (
-              <div style={{width: 100, height: 50}} />
+              <img src={github}
+                alt="GitHub Logo"
+                style={{
+                  width: 100,
+                  height: 50,
+                  objectFit: "contain",
+                  borderRadius: 8,
+                  marginRight: 12
+                }}
+              />
             )}
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

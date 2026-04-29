@@ -5,6 +5,7 @@ import shadersandbox from "../images/ShaderSandbox.png"
 import pcr from "../images/PointCloudRenderer.png"
 import forge from "../images/forge.png"
 import uno from "../images/TermProject.png"
+import react from "../images/react.png"
 
 const REPO_IMAGES = {
   "ShaderSandbox" : shadersandbox,
@@ -12,6 +13,7 @@ const REPO_IMAGES = {
   "PointCloudRenderer" : pcr,
   "Forge" : forge,
   "TermProject" : uno,
+  "jackpsmith-git.github.io" : react
 }
 
 const USERNAME = "jackpsmith-git";
