@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import GitHubButton from 'react-github-btn';
 import { Button } from './Button.js';
-import github from "./images/github.png"
-
-import cataclysm from "./images/Cataclysm.png"
-import shadersandbox from "./images/ShaderSandbox.png"
-import pcr from "./images/PointCloudRenderer.png"
-import forge from "./images/forge.png"
-import uno from "./images/TermProject.png"
+import GitHubButton from 'react-github-btn';
 
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+import github from "./images/github.png"
+import cataclysm from "./images/Cataclysm.png"
+import shadersandbox from "./images/ShaderSandbox.png"
+import pcr from "./images/PointCloudRenderer.png"
+import forge from "./images/forge.png"
+import uno from "./images/TermProject.png"
 
 const REPO_IMAGES = {
   "ShaderSandbox" : shadersandbox,
@@ -107,9 +107,7 @@ export const Projects = () => {
               
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <span>
-                  <h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">
-                    {repo.name}
-                  </h3>
+                  <h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3>
                 </span>
                 <span>
                   <p style={{ paddingLeft: 10, margin: 0, textAlign: 'left'}}>({repo.languages.slice(0, 8).join(", ")})</p>
@@ -126,9 +124,7 @@ export const Projects = () => {
                 </span>
                 <span>
                   <div className="insetcard" style={{ margin: 0, display: 'flex', flexDirection: 'row', alignItems: 'center', padding: 4, paddingLeft: 8, paddingRight: 8, borderRadius: 4, boxShadow: 'inset 0 2px 3px rgba(0, 0, 0, 0.1)', backgroundColor: 'rgb(247, 247, 247)'}}>
-                    <span style={{paddingRight: 10, alignItems: 'center'}}>
-                      <strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}
-                    </span>
+                    <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>★</strong> {repo.stars}</span>
                     <span style={{paddingRight: 10, alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>👁</strong> {repo.watchers}</span>
                     <span style={{alignItems: 'center'}}><strong style={{ display: 'inline-block', width: 16, textAlign: 'center' }}>⚠</strong> {repo.issues}</span>
                   </div>
