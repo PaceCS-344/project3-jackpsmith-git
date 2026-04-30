@@ -103,9 +103,13 @@ export const Skills = () => { return (
             <AccordionDetails>
                 <div className="skills-grid">
                 {Object.entries(sectionValue).map(([key, value]) => (
-                    <div key={key}><div className="insetcard">
-                        <Shake><img src={value} width="100%" /></Shake>
-                        <h2>{key}</h2>
+                    <div key={key}><div className="insetcard" style={{paddingTop: 10, paddingBottom: 10, paddingLeft: 0, paddingRight: 0, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                        <span style={{marginRight: 5}}>
+                            <Shake><img src={value} width="30" /></Shake>
+                        </span>
+                        <span>
+                            <h4 style={{textAlign: 'center', paddingTop: 0, paddingBottom: 0, marginBottom: 3, marginTop: 8 }}>{key}</h4>
+                        </span>
                     </div></div>
                 ))}
                 </div>
