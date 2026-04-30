@@ -106,6 +106,8 @@ body {
   padding-bottom: 24px;
   padding-left: 48px;
   padding-right: 48px;
+  width: auto;
+  flex-grow: 1;
 }
 
 .card {

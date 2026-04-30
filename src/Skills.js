@@ -20,8 +20,9 @@ import opengl from "./images/opengl.png"
 import nodejs from "./images/nodejs.png"
 import react from "./images/react.png"
 import bootstrap from "./images/bootstrap.png"
+import tailwind from "./images/tailwind.png"
 import vulkan from "./images/vulkan.png"
-import dotnet from "./images/dotnet.png"
+import dotnet from "./images/dotnet-logo.png"
 import fastapi from "./images/FastAPI.png"
 
 import visualstudio from "./images/visualstudio.png"
@@ -32,6 +33,7 @@ import unity from "./images/unity.png"
 import docker from "./images/docker.png"
 import mysql from "./images/mysql.png"
 import cmake from "./images/cmake.png"
+import claude from "./images/claude-color.png"
 
 import windows from "./images/windows.png"
 import linux from "./images/linux.png"
@@ -55,25 +57,27 @@ const FRAMEWORKS = {
     "Vulkan" : vulkan,
     "React" : react,
     "Bootstrap" : bootstrap,
-    ".NET/ASP.NET" : dotnet,
+    "Tailwind" : tailwind,
+    ".NET" : dotnet,
     "node.js" : nodejs,
     "FastAPI" : fastapi,
 }
 
 const DEVTOOLS = {
-    "Visual Studio" : visualstudio,
+    "VS 2022" : visualstudio,
     "VS Code" : vscode,
     "Git" : git,
     "GitHub" : github,
+    "Claude" : claude,
     "Unity" : unity,
     "Docker" : docker,
-    "MySQL/ MariaDB" : mysql,
+    "MySQL" : mysql,
     "CMake" : cmake,
 }
 
 const OPERATING_SYSTEMS = {
     "Windows" : windows,
-    "Unix/Linus" : linux,
+    "Unix/Linux" : linux,
     "MacOS" : apple,
     "iOS" : apple,
     "Android" : android,
