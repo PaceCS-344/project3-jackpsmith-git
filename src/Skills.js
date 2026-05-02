@@ -24,12 +24,15 @@ import tailwind from "./images/tailwind.png"
 import vulkan from "./images/vulkan.png"
 import dotnet from "./images/dotnet-logo.png"
 import fastapi from "./images/FastAPI.png"
+import threejs from "./images/threejs.png"
+import qt from "./images/qt.png"
 
 import visualstudio from "./images/visualstudio.png"
 import vscode from "./images/vscode.png"
 import git from "./images/git.png"
 import github from "./images/github.png"
 import unity from "./images/unity.png"
+import unreal from "./images/unreal.png"
 import docker from "./images/docker.png"
 import mysql from "./images/mysql.png"
 import cmake from "./images/cmake.png"
@@ -60,7 +63,9 @@ const FRAMEWORKS = {
     "Tailwind" : tailwind,
     ".NET" : dotnet,
     "node.js" : nodejs,
+    "Three.js" : threejs,
     "FastAPI" : fastapi,
+    "Qt" : qt,
 }
 
 const DEVTOOLS = {
@@ -70,6 +75,7 @@ const DEVTOOLS = {
     "GitHub" : github,
     "Claude" : claude,
     "Unity" : unity,
+    "Unreal"  : unreal,
     "Docker" : docker,
     "MySQL" : mysql,
     "CMake" : cmake,
