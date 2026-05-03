@@ -1,6 +1,7 @@
 import { Button } from './Components/Button.js'
 import { ShakeCard } from './Components/ShakeCard.js'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 import cataclysm from "./images/Cataclysm.png"
 import shaderSandbox from "./images/ShaderSandbox.png"
@@ -32,6 +33,16 @@ const FEATURED_PROJECTS = [
 
 export const Home = () => { return (
 <div className="p-6 graybackground"><div className="page-container">
+  
+  {/* <motion.section initial={{y: 25, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{duration: 1, ease: "easeInOut"}} style={{marginTop: 300, marginBottom: 50, padding: '0px 20px'}}>
+    <p style={{textAlign: 'right', lineHeight: .8}}>
+      <h1 style={{fontSize: '10em', marginBottom: 0}}>Jack P Smith</h1>
+      <h3 style={{fontSize: 80, textAlign: 'right', lineHeight: 1, marginTop: 10}}>Software Engineer</h3>
+    </p>
+  </motion.section> */}
+  
   <h2>Featured Projects</h2>
   <div className="flex-grid">
     {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
@@ -46,12 +57,19 @@ export const Home = () => { return (
   </div>
 
   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: 15, paddingBottom: 15 }}><div className="shake"><Link to="/Projects"><Button><h3 style={{marginLeft: 12, marginRight: 12, marginTop: 8, marginBottom: 8}}>See More</h3></Button></Link></div></div>
-  <hr style={{marginTop: 40}}/>
+  <hr style={{marginTop: 40, marginBottom: 20}}/>
 
   <div style={{ textAlign: 'center', padding: '60px 20px' }}>
-    <h1>"You might not think that programmers are artists, but programming is an extremely creative profession."</h1>
-    <h3 style={{ margin: 0 }}>- John Romero</h3>
-    <p style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</p>
+    <motion.h1
+      initial={{y: 25, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{duration: 1, ease: "easeInOut"}}>"You might not think that programmers are artists, but programming is an extremely creative profession."</motion.h1>
+    <motion.h3 initial={{y: 25, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0 }}>- John Romero</motion.h3>
+    <motion.p initial={{y: 25, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</motion.p>
   </div>
 
 </div></div>
